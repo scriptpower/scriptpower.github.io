@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go</title>
+  </head>
+  <body>
+    <h1>Loading</h1>
+    <script>
+      ;(function () {
+        var Plats = {
+          // tx: '',
+          ali: 'https://mi.aliyun.com/detail/online.html?domainName={d}',
+          dan: 'https://dan.com/buy-domain/{d}'
+        }
+
+        function q2o(q) {
+          var a = q.split(/&/),
+            o = {}
+          a.forEach(function (s) {
+            var i = s.indexOf('='),
+              k = i > 0 ? decodeURIComponent(s.slice(0, i)) : s,
+              v = i > 0 ? decodeURIComponent(s.slice(i + 1)) : ''
+            if (k) {
+              o[k] = v || ''
+            }
+          })
+          return o
+        }
+
+        function r(s, o) {
+          o = o || {}
+          s = s || ''
+          s = s.replace(/\{(\w+)\}/g, function (_, k) {
+            return o[k] !== undefined ? o[k] : ''
+          })
+          return s
+        }
+
+        function start() {
+          var o = q2o(location.search.slice(1)),
+            u = o.u,
+            d = o.d,
+            p = o.p || 'ali'
+          if (d) {
+            u = r(Plats[p], { d: d })
+          }
+          if (u && /^\w+\:\/\//.test(u)) {
+            location.replace(u)
+          }
+        }
+
+        start()
+      })()
+    </script>
+  </body>
+</html>
