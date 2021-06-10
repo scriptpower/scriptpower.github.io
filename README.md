@@ -1,2 +1,0 @@
-# scriptpower.github.io
-welcome
