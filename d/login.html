@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      label {
+        display: inline-block;
+        width: 8em;
+        text-align: right;
+        padding-right: 0.5em;
+      }
+      #user, #pwd {
+        width: 20em;
+      }
+      #btnSubmit {
+        width: 20em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loginForm">
+      <h1>Login</h1>
+      <p>
+        <label for="user">UserName:</label
+        ><input type="text" name="user" id="user" />
+      </p>
+      <p>
+        <label for="pwd">Password:</label><input type="password" name="pwd" id="pwd" />
+      </p>
+      <p><label for="btnSubmit">&nbsp;</label><button onclick="alert('password is error')" id="btnSubmit">Submit</button></p>
+    </div>
+  </body>
+</html>
