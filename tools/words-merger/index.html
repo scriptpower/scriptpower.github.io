@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="WordsMerger is a free tool to combine words easily online, just enter your words in the columns and start merging. Try it now."
+    />
+    <meta
+      name="keywords"
+      content="combine,merge,words,tool,wordsmerger,mergewords"
+    />
+    <meta name="author" content="ThoMaRo" />
+    <link async rel="stylesheet" type="text/css" href="./css/style.css" />
+    <title>WordsMerger - A free online tool to merge words easily</title>
+  </head>
+  <body>
+    <header>
+      <div class="content">
+        <div class="logo"><img src="./img/wordsmerger-logo.png" /></div>
+        <div class="titlebar">
+          <div class="tagline">
+            <p>Words merger is a free online tool to merge words easily.</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="content">
+        <h1 class="title">Combine words with WordsMerger</h1>
+      </div>
+    </section>
+    <main>
+      <div class="content">
+        <div class="inputs">
+          <div>
+            <textarea
+              id="wordarea1"
+              rows="10"
+              placeholder="Enter some words here"
+            ></textarea>
+          </div>
+          <div>
+            <textarea
+              id="wordarea2"
+              rows="10"
+              placeholder="Enter some words here"
+            ></textarea>
+          </div>
+          <div>
+            <textarea
+              id="wordarea3"
+              rows="10"
+              placeholder="Enter some words here"
+            ></textarea>
+          </div>
+        </div>
+        <div class="options">
+          <div class="separators">
+            <label class="label">Separator:</label>
+            <ul>
+              <li>
+                <input
+                  type="radio"
+                  name="separators"
+                  value="sepNot"
+                  checked
+                />Nothing
+              </li>
+              <li><input type="radio" name="separators" value="sepSpa" />,</li>
+              <li><input type="radio" name="separators" value="sepDas" />-</li>
+              <li><input type="radio" name="separators" value="sepPlu" />+</li>
+            </ul>
+          </div>
+          <div class="spacer">
+            <label class="label">Add spaces:</label>
+            <ul>
+              <li>
+                <input type="radio" name="spacers" value="yes" checked />Yes
+              </li>
+              <li><input type="radio" name="spacers" value="no" />No</li>
+            </ul>
+          </div>
+          <div class="wrappers">
+            <label class="label">Wrap in:</label>
+            <ul>
+              <li>
+                <input
+                  type="radio"
+                  name="wrappers"
+                  value="wrapNot"
+                  checked
+                />Nothing
+              </li>
+              <li><input type="radio" name="wrappers" value="wrapsqr" />[]</li>
+              <li><input type="radio" name="wrappers" value="wrapqte" />" "</li>
+              <li><input type="radio" name="wrappers" value="wrapsgl" />' '</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mergeOptions">
+          <a
+            href=""
+            class="btn btn-merge"
+            id="mergeTheWords"
+            onClick="ga('send', 'event', 'mergewords', 'click', 'label');"
+            >Merge Words!<i class="fa fa-angle-right" aria-hidden="true"></i
+          ></a>
+        </div>
+        <div>
+          <p id="feedback">
+            <span id="resultCount"></span> combinations are made!
+          </p>
+        </div>
+        <div class="results">
+          <textarea id="mergedResults" rows="10"></textarea>
+        </div>
+        <div class="resultOptions">
+          <a href="" class="btn btn-copy"
+            ><i class="fa fa-clone" aria-hidden="true"></i> Copy to clipboard</a
+          ><a href="" class="btn btn-download"
+            ><i class="fa fa-download" aria-hidden="true"></i> Download to
+            .CSV</a
+          >
+        </div>
+      </div>
+    </main>
+    <section>
+      <div class="content">
+        <h2 class="title" style="margin-bottom: 20px">Why use WordsMerger?</h2>
+        <p>
+          Merge or combine words, fast and easy. This tool can be used for
+          domain registrations, Google Adwords (PPC), SEO, Linkbuilding and
+          database development.
+        </p>
+        <p>
+          Type your keywords in the three boxes and press 'Merge Words'! Each
+          row of the three boxes are used to create unique word combinations, a
+          must in domaining, linkbuilding, Adwords!
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="content"><span>Powered by ThoMaRo</span></div>
+      <link
+        defer
+        href="./css/font-awesome.min.css"
+        rel="stylesheet"
+      /><link
+        defer
+        href="./css/fonts-googleapis.css"
+        rel="stylesheet"
+      />
+      <script
+        defer
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"
+      ></script>
+      <script defer src="./js/wordsmerger.js" type="text/javascript"></script>
+    </footer>
+  </body>
+</html>
